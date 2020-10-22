@@ -1,0 +1,65 @@
+/* :root {
+  --bgPageColor: #fff;
+  --transitionElements: all 0.3s ease-in-out;
+  --hoverColor: #7b68ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: yellow;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.logo {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 3.5rem;
+  color: #191970;
+  text-decoration: none;
+}
+.logo a:hover {
+  transition: var(--transitionElements);
+  color: var(--hoverColor);
+  cursor: pointer;
+}
+.bookingCart {
+  position: absolute;
+  right: 0;
+  padding: 14px 16px;
+}
+.bookingCart a {
+  color: #fff;
+  text-decoration: none;
+}
+.bookingCart a:hover {
+  transition: var(--transitionElements);
+  color: var(--hoverColor);
+  cursor: pointer;
+}
+nav {
+  background-color: #333;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+}
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 2rem;
+  font-family: cursive;
+}
+.nav li a:hover {
+  transition: var(--transitionElements);
+  color: var(--hoverColor);
+  cursor: pointer;
+}
+button .icon-bar {
+  background-color: #fff;
+} */

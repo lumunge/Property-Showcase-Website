@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/dave-weatherall-FUEOFoK3vh4-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: -7;
+}
+header {
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .topper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.topper .logo {
+  margin: 0 auto;
+  padding: 1rem;
+}
+.topper .logo a {
+  color: #1e90ff;
+  font-family: cursive;
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+}
+.topper .bookingCart {
+  position: absolute;
+  right: 20px;
+}
+.topper .bookingCart a {
+  color: #1e90ff;
+  font-family: cursive;
+  font-weight: 500;
+  text-decoration: none;
+}
+.topper .logo a:hover,
+.topper .bookingCart a:hover {
+  background-color: yellow;
+  color: #ff6347;
+  transition: all 0.5s ease-in-out;
+}
+.topper .bookingCart {
+  float: right;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0px;
+  width: 100%;
+  z-index: 600;
+}
+.navbar-header .icon-bar {
+  background-color: #fff;
+}
+.navbar-nav li a {
+  color: #fff;
+  font-family: cursive;
+  font-weight: 600;
+  font-size: 2rem;
+  border-right: 0.5px solid #000;
+}
+.navbar-nav li a:hover {
+  color: #ff6347;
+  transition: all 0.5s ease-in-out;
+}
+.dropdown-menu li a {
+  color: #000;
+}
+.dropdown-menu li a:hover {
+  color: #ff6347;
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -150px;
+  width: 400px;
+  height: auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.login h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.login button {
+  font-size: 2rem;
+  padding: 2rem;
+  width: 200px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 5px;
+  font-family: cursive;
+  line-height: 1rem;
+  border: 1px solid #000;
+  background-color: #696969;
+  margin-top: 2rem;
+}
+
+.login button:hover {
+  background-color: transparent;
+  transition: all 0.5s ease-in;
+}
+
+form input {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background: transparent;
+  letter-spacing: 4px;
+  border: none;
+  margin-bottom: 15px;
+  padding: 1.2rem;
+}
+#regText {
+  font-family: cursive;
+  font-size: 1.8rem;
+  color: #fff;
+  padding: 2rem;
+  /* margin: 2rem; */
+}
+#regText a {
+  font-family: cursive;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #00ff00;
+}
+#regText a:hover {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease-in;
+}

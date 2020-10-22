@@ -1,0 +1,35 @@
+body {
+  background-image: url("../images/homeimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.table {
+  background-color: #333;
+  color: #faebd7;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.btn {
+  background-color: #333;
+  color: #adff2f;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #000;
+  transition: 1s ease;
+}
+.btn-log {
+  background-color: red;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+.btn-log:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: transparent;
+  transition: all 1s ease;
+}

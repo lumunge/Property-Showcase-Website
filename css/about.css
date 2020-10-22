@@ -1,0 +1,62 @@
+footer {
+  background-color: #000;
+}
+.topper {
+  display: flex;
+  flex-flow: row wrap;
+}
+.topper .logo {
+  float: left;
+  padding: 1.3rem;
+}
+.topper .retop {
+  position: absolute;
+  right: 10px;
+  padding: 1.3rem;
+}
+.midder {
+  padding: 0 4rem;
+}
+.about,
+.connect,
+.contacts,
+.subscribe {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.lachu {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1rem;
+  font-family: cursive;
+}
+.about p,
+.connect p,
+.contacts p,
+.subscribe p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-right: 1rem;
+  border-right: 0.5px solid #ff6347;
+  font-family: cursive;
+}
+.about a,
+.connect a,
+.contacts a,
+.subscribe a {
+  color: #ff6347;
+  padding: 0 2rem;
+}
+.about a:hover,
+.connect a:hover,
+.contacts a:hover,
+.subscribe a:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
