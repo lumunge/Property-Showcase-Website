@@ -1,4 +1,4 @@
-# WakhuraRentals
+# Property Showcase WebApp
 Rentals Property Project
 This is a project that will form a common ground for landowners(landlords and ladies) and tenants where by the latter can checkout available accomodation
 on the site which sets up a pool of resources contributed by different stakholders-the land owners.
