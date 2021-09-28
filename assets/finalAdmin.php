@@ -1,32 +1,32 @@
 <?php
-error_reporting(E_ERROR);
+// error_reporting(E_ERROR);
 
-$newAccounts="SELECT * FROM tenants WHERE tenant_status='Pending'";
-$rec=mysqli_query($conn,$newAccounts);
-$noNewAcc=mysqli_num_rows($rec);
-
-
-$SELECT="SELECT fb.fb_id, fb.tenant_id, fb.comment, fb.reply, fb.staff_id, fb.date, t.tenant_id,t.username FROM feedback AS fb INNER JOIN tenants AS t WHERE fb.tenant_id=t.tenant_id AND fb.reply='Pending' " ;
-$records=mysqli_query($conn,$SELECT);
-$fbpending=mysqli_num_rows($records);
+// $newAccounts = "SELECT * FROM tenants WHERE tenant_status='Pending'";
+// $rec = mysqli_query($conn, $newAccounts);
+// $noNewAcc = mysqli_num_rows($rec);
 
 
-$selsct="SELECT * FROM rent_payment AS rp INNER JOIN rooms AS r ON rp.room_id=r.room_id RIGHT JOIN tenants AS t ON rp.tenant_id=t.tenant_id RIGHT JOIN apartment AS a ON r.apartment_id=a.apartment_id RIGHT JOIN bookings AS b ON r.room_id=b.room_id WHERE rp.payment_status='Pending Approval' AND rp.type_of_payment='Booking Payment'";
-$records=mysqli_query($conn,$selsct);
-$bkpending=mysqli_num_rows($records);
-
-$select="SELECT * FROM `rent_payment`  WHERE payment_status='Pending Approval'";
-$query=mysqli_query($conn,$select);
-$rentPay=mysqli_num_rows($query);
-
-$ct="SELECT * FROM `feedback`  WHERE reply='Pending'";
-$reply=mysqli_query($conn,$ct);
-$fbReply=mysqli_num_rows($reply);
+// $SELECT = "SELECT fb.fb_id, fb.tenant_id, fb.comment, fb.reply, fb.staff_id, fb.date, t.tenant_id,t.username FROM feedback AS fb INNER JOIN tenants AS t WHERE fb.tenant_id=t.tenant_id AND fb.reply='Pending' " ;
+// $records = mysqli_query($conn, $SELECT);
+// $fbpending = mysqli_num_rows($records);
 
 
-$select="SELECT * FROM `vacate_notice` WHERE vacate_status='Pending Approval'    ";
-$query=mysqli_query($conn,$select);
-$vacatePending=mysqli_num_rows($query);
+// $selsct = "SELECT * FROM rent_payment AS rp INNER JOIN rooms AS r ON rp.room_id=r.room_id RIGHT JOIN tenants AS t ON rp.tenant_id=t.tenant_id RIGHT JOIN apartment AS a ON r.apartment_id=a.apartment_id RIGHT JOIN bookings AS b ON r.room_id=b.room_id WHERE rp.payment_status='Pending Approval' AND rp.type_of_payment='Booking Payment'";
+// $records = mysqli_query($conn, $selsct);
+// $bkpending = mysqli_num_rows($records);
+
+// $select = "SELECT * FROM `rent_payment`  WHERE payment_status='Pending Approval'";
+// $query = mysqli_query($conn, $select);
+// $rentPay = mysqli_num_rows($query);
+
+// $ct = "SELECT * FROM `feedback`  WHERE reply='Pending'";
+// $reply = mysqli_query($conn, $ct);
+// $fbReply = mysqli_num_rows($reply);
+
+
+// $select = "SELECT * FROM `vacate_notice` WHERE vacate_status='Pending Approval'    ";
+// $query = mysqli_query($conn, $select);
+// $vacatePending = mysqli_num_rows($query);
 
 ?>
 <!DOCTYPE html>
@@ -102,9 +102,9 @@ padding: 0 .7rem;
 <a href="pending_rent_payment.php">New Rent Payment <?php echo $rentPay ?> //</a>   
 <a href="new_feedback.php"">Pending Feedback <?php echo $fbReply; ?> //</a>
 <?php
-if ($_SESSION['userlevel']=='Staff'){
-}else{
-?>
+if ($_SESSION['userlevel']=='Staff') {
+} else {
+    ?>
 <a href="pending_vacate_notice.php">Vacate Notice <?php echo $vacatePending ?></a>
 <?php
 }
@@ -178,15 +178,15 @@ if ($_SESSION['userlevel']=='Staff'){
 </a>
 </li>
 <?php
-if ($_SESSION['userlevel']=='Staff'){
-echo '<li class="active">
+if ($_SESSION['userlevel']=='Staff') {
+    echo '<li class="active">
 <a class="" href="staff_pending_inspection.php">
 <i class="icon_house_alt"></i>
 <span>Apartment To Inspect</span>
 </a>
 </li> ';
-}else{
-echo '<li class="active">
+} else {
+    echo '<li class="active">
 <a class="" href="inspected_apartments.php">
 <i class="icon_house_alt"></i>
 <span>Apartment Inspection</span>

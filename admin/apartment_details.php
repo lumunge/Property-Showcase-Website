@@ -5,20 +5,20 @@ include("../assets/connection.php");
 include("../assets/finalAdmin.php");
 
 
-if (isset($_POST['tenantBtn'])){
-echo $_SESSION['appTenant']=$_POST['hiddenAppID'];
-echo $_SESSION['apartmentName']=$_POST['apartmentName'];
-echo '<script>
-location.href="apartments_tenants.php"
-</script>';
-}
-if (isset($_POST['emptyBtn'])){
-$_SESSION['hiddenAppID']=$_POST['hiddenAppID'];
-$_SESSION['apartmentName']=$_POST['apartmentName'];
-echo '<script>
-location.href="empty_apartments.php"
-</script>';
-}
+// if (isset($_POST['tenantBtn'])) {
+//     echo $_SESSION['appTenant']=$_POST['hiddenAppID'];
+//     echo $_SESSION['apartmentName']=$_POST['apartmentName'];
+//     echo '<script>
+// location.href="apartments_tenants.php"
+// </script>';
+// }
+// if (isset($_POST['emptyBtn'])) {
+//     $_SESSION['hiddenAppID']=$_POST['hiddenAppID'];
+//     $_SESSION['apartmentName']=$_POST['apartmentName'];
+//     echo '<script>
+// location.href="empty_apartments.php"
+// </script>';
+// }
 
 ?>
 
@@ -46,23 +46,25 @@ location.href="empty_apartments.php"
 <a href="pending_deposit_refunds.php"> <input type="submit" name="" value="Deposit Refund" class="btn btn-md btn-info"></a>
 </div>
 <?php
-$slct="SELECT * FROM apartment";
-$qry=mysqli_query($conn,$slct);
-while($row=mysqli_fetch_array($qry)){
-echo ' <div class="col-lg-3 col-md-3 table-responsive" >
-<h4 align="center">'.$row['name'].'</h4>
-<form method="post">
-<input type="hidden" name="hiddenAppID" value="'.$row['apartment_id'].'" class="btn-warning"/>
-<input type="hidden" name="apartmentName" value="'.$row['name'].'" class="btn-warning"/>
-<input type="hidden" name="empty" value="Empty" class="btn-warning"/>
-<input type="hidden" name="empty" value="Empty" class="btn-warning"/>
-<input type="hidden" name="booked" value="Booked" class="btn-warning"/>
-<input type="submit" name="tenantBtn" value="Tenants/ Booked Rooms" class="form-control btn-info"><br/>
-<input type="submit" name="emptyBtn" value="Empty Rooms" class="form-control btn-info"><br/>
-</form>
-</div>  ';
-}
+// $slct="SELECT * FROM apartment";
+// $qry=mysqli_query($conn, $slct);
+// while ($row=mysqli_fetch_array($qry)) {
+//     echo ' <div class="col-lg-3 col-md-3 table-responsive" >
+// <h4 align="center">'.$row['name'].'</h4>
+// <form method="post">
+// <input type="hidden" name="hiddenAppID" value="'.$row['apartment_id'].'" class="btn-warning"/>
+// <input type="hidden" name="apartmentName" value="'.$row['name'].'" class="btn-warning"/>
+// <input type="hidden" name="empty" value="Empty" class="btn-warning"/>
+// <input type="hidden" name="empty" value="Empty" class="btn-warning"/>
+// <input type="hidden" name="booked" value="Booked" class="btn-warning"/>
+// <input type="submit" name="tenantBtn" value="Tenants/ Booked Rooms" class="form-control btn-info"><br/>
+// <input type="submit" name="emptyBtn" value="Empty Rooms" class="form-control btn-info"><br/>
+// </form>
+// </div>  ';
+// }
 ?>
+
+<h1>Hello World</h1>
 
 <div class="row"></div>  
 <!-- Today status end -->
@@ -96,7 +98,7 @@ echo ' <div class="col-lg-3 col-md-3 table-responsive" >
 <script>
 
 //knob
-$(".knob").knob();
+// $(".knob").knob();
 
 </script>
 <script src="../FAICO/js/all.min.js"></script>
@@ -106,48 +108,48 @@ $(".knob").knob();
 <script>
 
 //knob
-$(function() {
-$(".knob").knob({
-'draw' : function () { 
-$(this.i).val(this.cv + '%')
-}
-})
-});
+// $(function() {
+// $(".knob").knob({
+// 'draw' : function () { 
+// $(this.i).val(this.cv + '%')
+// }
+// })
+// });
 
 //carousel
-$(document).ready(function() {
-$("#owl-slider").owlCarousel({
-navigation : true,
-slideSpeed : 300,
-paginationSpeed : 400,
-singleItem : true
+// $(document).ready(function() {
+// $("#owl-slider").owlCarousel({
+// navigation : true,
+// slideSpeed : 300,
+// paginationSpeed : 400,
+// singleItem : true
 
-});
-});
+// });
+// });
 
 //custom select box
 
-$(function(){
-$('select.styled').customSelect();
-});
+// $(function(){
+// $('select.styled').customSelect();
+// });
 
 /* ---------- Map ---------- */
-$(function(){
-$('#map').vectorMap({
-map: 'world_mill_en',
-series: {
-regions: [{
-values: gdpData,
-scale: ['#000', '#000'],
-normalizeFunction: 'polynomial'
-}]
-},
-backgroundColor: '#eef3f7',
-onLabelShow: function(e, el, code){
-el.html(el.html()+' (GDP - '+gdpData[code]+')');
-}
-});
-});
+// $(function(){
+// $('#map').vectorMap({
+// map: 'world_mill_en',
+// series: {
+// regions: [{
+// values: gdpData,
+// scale: ['#000', '#000'],
+// normalizeFunction: 'polynomial'
+// }]
+// },
+// backgroundColor: '#eef3f7',
+// onLabelShow: function(e, el, code){
+// el.html(el.html()+' (GDP - '+gdpData[code]+')');
+// }
+// });
+// });
 
 </script>
 

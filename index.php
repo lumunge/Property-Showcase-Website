@@ -38,6 +38,7 @@ swal('Success','".$feedback."')
 </script>";
 }
 ?>
+<!-- NAVBAR -->
 <?php
 include('assets/pageNav.php');
 ?>
