@@ -13,8 +13,6 @@ if (isset($_POST['bookBtn'])) {
     header('location:cart.php');
 }
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,15 +38,15 @@ swal('Success','".$feedback."')
 ?>
 <div class="landing">
 <img src="./images/GettyImages_619686566.1503067714.jpg" alt="">
-<div id="sect">
+<div class="landing-section">
 <i class="cit fas fa-city"></i>
 <h1>Welcome to Juno Estates</h1>
 <p>Available Homes and apartments at the best prices.</p>
-<a href="#!" id="cta"><button class="cta">Learn More <i class="fas fa-arrow-right"></i></button></a>
+<a href="#!"><button class="cta">Learn More <i class="fas fa-arrow-right"></i></button></a>
 </div>
 </div>
 
-<div id="sectionB">
+<div class="apartments">
 <div class="row">
 <div class="gallery">
 
@@ -64,7 +62,7 @@ while ($row=mysqli_fetch_array($record)) {
 
 <h4>'.$row['name'].'</h4>
 
-<form id="formation" method="POST">
+<form id="form" method="POST">
 <img width="240" height="240" src="uploadsImg/'.$row['image'].'"class=" image-responsive" >
 <p class="tag">'.$row['apartment_type'].'<br></p>
 <p class="tag" style="font-size:18px;">'.$row['description'].' <br/></p>';

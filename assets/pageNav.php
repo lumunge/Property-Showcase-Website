@@ -29,7 +29,6 @@
       }
       .topper .logo a {
         color: #1e90ff;
-        font-family: cursive;
         font-weight: 600;
         font-size: 3rem;
         text-align: center;
@@ -41,7 +40,6 @@
       }
       .topper .bookingCart a {
         color: #1e90ff;
-        font-family: cursive;
         font-weight: 500;
         text-decoration: none;
       }
@@ -64,7 +62,6 @@
       }
       .navbar-nav li a {
         color: #fff;
-        font-family: cursive;
         font-weight: 600;
         font-size: 2rem;
         border-right: 0.5px solid #000;
