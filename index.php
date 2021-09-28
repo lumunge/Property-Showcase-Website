@@ -5,12 +5,11 @@ $_SESSION['username'];
 $_SESSION["tenantID"];
 include('assets/connection.php');
 
-if (isset($_POST['bookBtn'])){
+if (isset($_POST['bookBtn'])) {
+    $_SESSION['hiddenApID']=$_POST['hiddenApID'];
+    $_SESSION['hiddenname']=$_POST['hiddenname'];
 
-$_SESSION['hiddenApID']=$_POST['hiddenApID'];
-$_SESSION['hiddenname']=$_POST['hiddenname'];
-
-header('location:cart.php');
+    header('location:cart.php');
 }
 ?>
 
@@ -29,12 +28,12 @@ header('location:cart.php');
 </head>
 <body>
 <?php
-if ($sweet=='error'){
-echo"<script>
+if ($sweet=='error') {
+    echo"<script>
 swal('Error','".$feedback."')
 </script>";
-}elseif($sweet=='success'){
-echo"<script>
+} elseif ($sweet=='success') {
+    echo"<script>
 swal('Success','".$feedback."')
 </script>";
 }
@@ -58,9 +57,9 @@ include('assets/pageNav.php');
 
 <?php
 $select="SELECT * FROM `apartment` ";
-$record=mysqli_query($conn,$select);
-while($row=mysqli_fetch_array($record)){
-echo '
+$record=mysqli_query($conn, $select);
+while ($row=mysqli_fetch_array($record)) {
+    echo '
 
 <div class="col-md-3 col-lg-3 image-responsive">
 
@@ -73,21 +72,20 @@ echo '
 <p class="tag">'.$row['apartment_type'].'<br></p>
 <p class="tag" style="font-size:18px;">'.$row['description'].' <br/></p>';
 
-if (!empty($_SESSION['tenantID'])){
-echo '
+    if (!empty($_SESSION['tenantID'])) {
+        echo '
 <input type="hidden" name="hiddenApID" value="'.$row['apartment_id'].'">
 <input type="hidden" name="hiddenname" value="'.$row['name'].'">
 
 <input id="bookBtn" type="submit" name="bookBtn" value="Book" class="form-control btn-info">
 </form>';
-
-}else{
-echo '
+    } else {
+        echo '
 <a href="#!" id="learner"><button>Learn More <i class="fas fa-arrow-right"></i></button></a>
 
 </form>';
-}	
-echo '</div></div>';
+    }
+    echo '</div></div>';
 }
 ?>
 </div>

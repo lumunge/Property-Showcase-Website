@@ -12,7 +12,7 @@
    <div class="container-fluid " style="background-color: green">
 	<div class="row">
 	
-		<div class="col-lg-10 col-md-10"><center><em style="color: white;font-size: 28px"><strong>WAKHURA ESTATES</strong></em>      <img src="images/logo.jpg" class="img-circle" width="50"/></center></div>
+		<div class="col-lg-10 col-md-10"><center><em style="color: white;font-size: 28px"><strong>WAKHURA ESTATES</strong></em><img src="images/logo.jpg" class="img-circle" width="50"/></center></div>
 		<div class="col-lg-2 col-md-2"><a href="cart.php"><h5 style="color: white">View Booking Cart</h5></a></div>
 	</div>
 		
