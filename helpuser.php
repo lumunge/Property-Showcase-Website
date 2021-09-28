@@ -2,7 +2,7 @@
 error_reporting(E_ERROR||E_PERSER);
 session_start();
 include("assets/connection.php");
-// include('assets/pageNav.php');
+include('assets/pageNav.php');
 
 
 ?>
@@ -12,45 +12,14 @@ include("assets/connection.php");
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
 <title>Help</title>
-
-<link href="css/adminNav.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="./FAICO/css/all.min.css"/>
-<style>
-  .home a{
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    font-size: 5rem;
-    /* background-color: #696969; */
-    color: #696969;
-  }
-  .home a:hover{
-    color: #FF6347;
-    transition: all .7s ease-in-out;
-  }
-  .home p{
-    position: absolute;
-    top: 7.3rem;
-     left: 0.6rem;
-    text-align: center;
-    font-size: 1.2rem;
-    color: yellow;
-  }
-</style>
 </head>
 
 <body>
 <!-- container section start -->
 <section id="container" class="">
-<div class="home">
-<a href="index.php"><i class="fas fa-home"></i>  </a>
-<p><i class="fas fa-arrow-left"></i> Back Home</p>
-</div>
 <!--main content start-->
 <section id="" style="margin: 50px; padding: 30px; background-color: #333; color: #fff;">               
 <h2>  <em>Your Help is Here</em></h2>

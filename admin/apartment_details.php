@@ -64,8 +64,6 @@ include("../assets/finalAdmin.php");
 // }
 ?>
 
-<h1>Hello World</h1>
-
 <div class="row"></div>  
 <!-- Today status end -->
 <div class="row"><!--/col--><!--/col--><!--/col-->

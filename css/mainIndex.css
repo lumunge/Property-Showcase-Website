@@ -1,164 +1,152 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* width: 100%; */
-}
-body {
-  overflow-x: hidden;
-  width: 100%;
-}
 .landing {
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .landing img {
-  position: fixed;
-  top: 0;
-  z-index: -3;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  overflow: hidden;
+	position: fixed;
+	top: 0;
+	z-index: -3;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	overflow: hidden;
 }
 #sect {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column wrap;
-  color: #ffe4e1;
-  font-family: cursive;
-  height: 90%;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column wrap;
+	color: #ffe4e1;
+	font-family: cursive;
+	height: 90%;
+	width: 100%;
 }
 #sect .cit {
-  color: #ff6347;
-  font-size: 10rem;
+	color: #ff6347;
+	font-size: 10rem;
 }
 #sect .cta {
-  padding: 10px;
-  text-decoration: none;
-  color: #fff;
-  font-family: cursive;
-  font-size: 2rem;
+	padding: 10px;
+	text-decoration: none;
+	color: #fff;
+	font-family: cursive;
+	font-size: 2rem;
 }
 #cta button {
-  background-color: transparent;
-  border: 0.7px solid #ff6347;
-  border-radius: 10px;
+	background-color: transparent;
+	border: 0.7px solid #ff6347;
+	border-radius: 10px;
 }
 #cta button:hover {
-  background-color: #ff6347;
-  color: #000;
-  border: 0.7px solid #000;
-  transition: all 0.4s ease-in-out;
+	background-color: #ff6347;
+	color: #000;
+	border: 0.7px solid #000;
+	transition: all 0.4s ease-in-out;
 }
 #sectionB {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0 2rem 0 2rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0 2rem 0 2rem;
 }
 #formation {
-  height: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  font-family: cursive;
-  color: #000;
-  text-align: center;
+	height: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	font-family: cursive;
+	color: #000;
+	text-align: center;
 }
 input#bookBtn {
-  color: red;
-  width: 100px;
+	color: red;
+	width: 100px;
 }
 #learner {
-  position: absolute;
-  bottom: 10px;
+	position: absolute;
+	bottom: 10px;
 }
 
 #learner button {
-  padding: 10px;
-  font-weight: 400;
-  font-size: 1.7rem;
-  font-family: cursive;
-  border: 0.5px solid #000;
-  color: #000;
-  /* position: absolute;
-  bottom: 1rem; */
+	padding: 10px;
+	font-weight: 400;
+	font-size: 1.7rem;
+	font-family: cursive;
+	border: 0.5px solid #000;
+	color: #000;
 }
 #learner button:hover {
-  background-color: #ff6347;
-  color: #fff;
-  transition: all.5s ease-in-out;
+	background-color: #ff6347;
+	color: #fff;
+	transition: all.5s ease-in-out;
 }
 .thumbnail h4 {
-  color: #000;
-  text-align: center;
-  font-family: cursive;
-  font-weight: 600;
+	color: #000;
+	text-align: center;
+	font-family: cursive;
+	font-weight: 600;
 }
 footer {
-  background-color: #000;
+	background-color: #000;
 }
 .topper {
-  display: flex;
-  flex-flow: row wrap;
+	display: flex;
+	flex-flow: row wrap;
 }
 .topper .logo {
-  float: left;
-  padding: 1.3rem;
+	float: left;
+	padding: 1.3rem;
 }
 .topper .retop {
-  position: absolute;
-  right: 10px;
-  padding: 1.3rem;
+	position: absolute;
+	right: 10px;
+	padding: 1.3rem;
 }
 .midder {
-  padding: 0 4rem;
+	padding: 0 4rem;
 }
 .about,
 .connect,
 .contacts,
 .subscribe {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 }
 .lachu {
-  text-align: center;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding: 1rem;
-  font-family: cursive;
+	text-align: center;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 400;
+	padding: 1rem;
+	font-family: cursive;
 }
 .about p,
 .connect p,
 .contacts p,
 .subscribe p {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding-right: 1rem;
-  border-right: 0.5px solid #ff6347;
-  font-family: cursive;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 400;
+	padding-right: 1rem;
+	border-right: 0.5px solid #ff6347;
+	font-family: cursive;
 }
 .about a,
 .connect a,
 .contacts a,
 .subscribe a {
-  color: #ff6347;
-  padding: 0 2rem;
+	color: #ff6347;
+	padding: 0 2rem;
 }
 .about a:hover,
 .connect a:hover,
 .contacts a:hover,
 .subscribe a:hover {
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.3s ease;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }

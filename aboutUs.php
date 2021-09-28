@@ -4,7 +4,7 @@ error_reporting(E_ERROR);
  $_SESSION['username'];
  $_SESSION["tenantID"];
 include('assets/connection.php');
-// include('assets/pageNav.php');
+include('assets/pageNav.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,9 +21,6 @@ include('assets/connection.php');
   </head>
 
   <body style="background-color: #fff">
-    <?php
-include('assets/pageNav.php');
-?>
     <h1 align="center">
       <strong><em style="color: white"> WAKHURA ESTATES</em></strong>
     </h1>
