@@ -26,7 +26,7 @@ include('assets/pageNav.php');
       </h1>
       <hr />
       <div style="text-align: center;">
-        <h4>WAKHURA ESTATES</h4>
+        <h4>JUNO ESTATES</h4>
         <h4>P.O. Box 120-60200</h4>
         <h4>PHONE: +254735662789</h4>
         <h4>NAIROBI, Kenya.</h4>
@@ -35,7 +35,7 @@ include('assets/pageNav.php');
       <br>
       
         <h4>Town Secretary office</h4>
-        <h4>Email: wakhuraestatesmain@gmail.com</h4>
+        <h4>Email: junoestatesmain@gmail.com</h4>
         <h4>PHONE: +254709241000</h4>
     </div>
   </body>

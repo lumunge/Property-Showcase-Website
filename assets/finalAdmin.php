@@ -92,7 +92,7 @@ padding: 0 .7rem;
 
 <!--logo start-->
 <div class="logo">
-<a href="../admin/apartment_details.php"> WAKHURA ESTATES </a>
+<a href="../admin/apartment_details.php"> JUNO ESTATES </a>
 </div>
 <!--logo end-->
 

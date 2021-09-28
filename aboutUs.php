@@ -22,7 +22,7 @@ include('assets/pageNav.php');
 
   <body style="background-color: #fff">
     <h1 align="center">
-      <strong><em style="color: white"> WAKHURA ESTATES</em></strong>
+      <strong><em style="color: white"> JUNO ESTATES</em></strong>
     </h1>
 
     <div class="container">
@@ -96,7 +96,7 @@ include('assets/pageNav.php');
     <footer id="footer">
       <div class="topper">
         <div class="logo">
-          <a href="index.php">Wakhura Estates</a>
+          <a href="index.php">Juno Estates</a>
         </div>
         <div class="retop">
           <a href="#!">
@@ -138,7 +138,7 @@ include('assets/pageNav.php');
         </div>
       </div>
       <div class="lachu">
-        <p>All rights Reserved &copy; Copyrights 2020 wakhuraestates</p>
+        <p>All rights Reserved &copy; Copyrights 2020 junoestates</p>
       </div>
     </footer>
   </body>

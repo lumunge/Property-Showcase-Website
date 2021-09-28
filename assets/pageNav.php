@@ -78,7 +78,7 @@
     <header class="cont1">
       <div class="topper">
         <div class="logo">
-          <a href="index.php">WAKHURA ESTATES</a>
+          <a href="index.php">JUNO ESTATES</a>
         </div>
         <div class="bookingCart">
           <a href="cart.php"

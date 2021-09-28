@@ -2,42 +2,41 @@
 session_start();
 error_reporting(E_ERROR);
 include("assets/connection.php");
-if(isset($_POST["login"])){
-unset($_SESSION['success']);
-if(empty($_POST["username"]) || empty($_POST["password"])){
-$sweet='error';
-$feedback= "Please enter both username and password to login";
+if (isset($_POST["login"])) {
+    unset($_SESSION['success']);
+    if (empty($_POST["username"]) || empty($_POST["password"])) {
+        $sweet='error';
+        $feedback= "Please enter both username and password to login";
+    } else {
+        $username=$_POST["username"];
+        $password=$_POST["password"];
 
-}else{
-$username=$_POST["username"];
-$password=$_POST["password"];
+        $select="SELECT * FROM tenants WHERE username='$username' AND password='$password'";
+        $query=mysqli_query($conn, $select);
+        $fetch=mysqli_num_rows($query);
+        $row=mysqli_fetch_assoc($query);// this will fetch tenant id from tenant table
+        $status=$row['tenant_status'];
 
-$select="SELECT * FROM tenants WHERE username='$username' AND password='$password'";
-$query=mysqli_query($conn,$select);
-$fetch=mysqli_num_rows($query);
-$row=mysqli_fetch_assoc($query);// this will fetch tenant id from tenant table
-$status=$row['tenant_status'];
-
-if ($fetch==1){
-if($status=='Approved'){
-unset($_SESSION['success']);
-$sweet='success';
-$feedback= "you have logged in";
-$_SESSION["tenantID"]=$row['tenant_id'];// session tenant id
-$_SESSION['username']=$row['username'];
-header("location:profile.php");
-}elseif($status=='Pending'){
-$sweet='error';
-$feedback= "Wait For your account to be approved";
-}elseif($status=='Rejected'|| $status=='Deactiveted'){
-$sweet='error';
-$feedback= "Access to your account has been Delined Please cantactthe admin";
-}
-}else{
-$sweet='error';
-$feedback= "Failed to login";
-}
-}
+        if ($fetch==1) {
+            if ($status=='Approved') {
+                unset($_SESSION['success']);
+                $sweet='success';
+                $feedback= "you have logged in";
+                $_SESSION["tenantID"]=$row['tenant_id'];// session tenant id
+                $_SESSION['username']=$row['username'];
+                header("location:profile.php");
+            } elseif ($status=='Pending') {
+                $sweet='error';
+                $feedback= "Wait For your account to be approved";
+            } elseif ($status=='Rejected'|| $status=='Deactiveted') {
+                $sweet='error';
+                $feedback= "Access to your account has been Delined Please cantactthe admin";
+            }
+        } else {
+            $sweet='error';
+            $feedback= "Failed to login";
+        }
+    }
 }
 ?>
 
@@ -56,27 +55,27 @@ $feedback= "Failed to login";
 
 <body>
 <?php
-if ($sweet=='error'){
-echo"<script>
+if ($sweet=='error') {
+    echo"<script>
 swal('Error','".$feedback."')
 </script>";
-}elseif($sweet=='success'){
-echo"<script>
+} elseif ($sweet=='success') {
+    echo"<script>
 swal('Success','".$feedback."')
 </script>";
 }
-if (!empty($_SESSION['success'])){
-echo"<script>
+if (!empty($_SESSION['success'])) {
+    echo"<script>
 swal('Success',' Wait for account activation')
 </script>";
-unset($_SESSION['success']);
+    unset($_SESSION['success']);
 }
 ?>
 
 <header class="cont1">
 <div class="topper">
 <div class="logo">
-<a href="index.php">WAKHURA ESTATES</a>
+<a href="index.php">JUNO ESTATES</a>
 </div>
 <div class="bookingCart">
 <a href="cart.php"

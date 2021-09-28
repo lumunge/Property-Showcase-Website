@@ -3,7 +3,7 @@ echo "
 <footer id='footer'>
 <div class='topper'>
 <div class='logo'>
-<a href='index.php'>Wakhura Estates</a>
+<a href='index.php'>Juno Estates</a>
 </div>
 <div class='retop'>
 <a href='#!'> <i class='far fa-arrow-alt-circle-up'></i> Return to Top</a>
@@ -43,7 +43,7 @@ echo "
 </div>
 </div>
 <div class='lachu'>
-<p>All rights Reserved &copy; Copyrights 2020 wakhuraestates</p>
+<p>All rights Reserved &copy; Copyrights 2020 junoestates</p>
 </div>
 </footer>
 ";

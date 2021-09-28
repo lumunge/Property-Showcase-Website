@@ -3,23 +3,23 @@ session_start();
 error_reporting(E_ERROR);
 include('assets/connection.php');
 include('assets/pageNav.php');
-if (empty($_SESSION['username'])){
-// header('location:login.php');
+if (empty($_SESSION['username'])) {
+    // header('location:login.php');
 }
 
 $username = $message = $sweet = "";
 
-if (isset($_POST['submitBtn'])){
-$username=$_POST['username'];
-$message=$_POST['message'];
-$insert="INSERT INTO feedback (username, message, reply)VALUES('".$_SESSION['username']."','$message', 'Pending')";
-if(mysqli_query($conn,$insert)){
-$_SESSION['message']='success';
-header('location:feedback_history.php');
-}else{
-$sweet='error';
-$feedback='Failed to send feedback';
-}
+if (isset($_POST['submitBtn'])) {
+    $username=$_POST['username'];
+    $message=$_POST['message'];
+    $insert="INSERT INTO feedback (username, message, reply)VALUES('".$_SESSION['username']."','$message', 'Pending')";
+    if (mysqli_query($conn, $insert)) {
+        $_SESSION['message']='success';
+        header('location:feedback_history.php');
+    } else {
+        $sweet='error';
+        $feedback='Failed to send feedback';
+    }
 }
 
 ?>
@@ -44,15 +44,14 @@ $feedback='Failed to send feedback';
 
 <?php
 
-if ($sweet=='error'){
-echo"<script>
+if ($sweet=='error') {
+    echo"<script>
 swal('Error','".$feedback."')
 </script>";
-}elseif($sweet=='success'){
-echo"<script>
+} elseif ($sweet=='success') {
+    echo"<script>
 swal('Success','".$feedback."')
 </script>";
-
 }
 
 ?>
@@ -81,7 +80,7 @@ swal('Success','".$feedback."')
 </div>
 <div class="col-lg-4">
 
-<h4>WAKHURA ESTATES HEADQUATERS</h4>
+<h4>JUNO ESTATES HEADQUATERS</h4>
 <h4>P.O. Box 120-60200</h4>
 <h4>Nairobi, Kenya.</h4>
 <h4>Phone +254735526890</h4>
@@ -89,8 +88,8 @@ swal('Success','".$feedback."')
 
 </div>
 <div class="col-lg-4">
-<h4>Wakhura Estates Secretary office</h4> 
-<h4>Email: wakhuraestates@gmail.com</h4>
+<h4>Juno Estates Secretary office</h4> 
+<h4>Email: junoestates@gmail.com</h4>
 <h4>Contact Centre: +254709241000</h4>		
 </div>
 <div class="col-lg-4"></div>
